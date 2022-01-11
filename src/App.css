@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 html {
-  height : 100vh
+  height : 100vh;
+  
 }
 
 body {
   background: #000;
   height: 400vh;
+  font-family: 'Rubik', sans-serif;
 }
 
 canvas {

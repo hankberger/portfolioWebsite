@@ -1,7 +1,32 @@
+import { Typography } from "@mui/material"
+import NavBar from "../components/navbar"
+import {createTheme} from '@mui/material/styles';
+import { ThemeProvider } from "@emotion/react";
+
+const font = "'Rubik', sans-serif";
+
+const theme = createTheme({
+  palette: {
+    primary:{
+      main: '#000000'
+    },
+    secondary: {
+      main: '#ffffff'
+    }
+  }, 
+  typography: {
+    fontFamily: font,
+  } 
+});
+
 export default function Contact(){
     return(
-        <main style = {{padding:"1rem 0"}}>
-            <h2>Contact</h2>
-        </main>
+        <div>
+             <NavBar/>
+             <Typography>
+                 Hank
+             </Typography>
+        </div>
+       
     )
 }
