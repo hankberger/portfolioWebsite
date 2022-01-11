@@ -1,8 +1,8 @@
 import {Link} from "react-router-dom";
 import {Button, Box, Typography, Grid, Card, CardMedia} from "@mui/material";
-import Image from 'material-ui-image';
 import NavBar from "./components/navbar";
 import React, {useEffect, useState} from "react";
+import { red } from "@mui/material/colors";
 
 
 
@@ -21,21 +21,35 @@ export default function App() {
   }, []);
 
   //Animation Scroll stuff.
-  const [scrollPosition, setScrollPosition] = useState(103);
+  const [scrollPosition, setScrollPosition] = useState(124);
+  const frameCount = 142;
 
   const handleScroll = () => {
-    setScrollPosition(window.scrollY + 103);
+    const windowHeight = window.innerHeight;
+    const windowPercent = window.scrollY / windowHeight;
+    const frameNum = Math.min(142, Math.floor(frameCount * windowPercent));
+    requestAnimationFrame(()=>setScrollPosition(frameNum + 124));
   }
 
   document.addEventListener('scroll', handleScroll);
 
   const imageName = `imageSequence/clothy2_0${scrollPosition}.png`
 
+  const preloadImages = () => {
+    for (let i = 1; i < frameCount; i++) {
+      const img = new Image();
+      img.src = `imageSequence/clothy2_0${i + 124}.png`;
+    }
+  };
+  
+  preloadImages();
+
   //DOM
   if(width < 900){
     return( <html lang = "en">
         <div>
           <NavBar/>
+          <Box sx = {{height: "25px", width: "300px", bgcolor: 'primary'}}/>
           <Box sx = {{bgcolor: '#000000'}}>
             <Grid container spacing = {0} sx = {{backgroundColor: "primary"}}>
               <Grid item xs = {12} md = {6}>
@@ -43,11 +57,11 @@ export default function App() {
                 <div style={{ position: "relative" }}>
                   <CardMedia
                     component="img"
-                    alt="Contemplative Reptile"
+                    alt="Red Cloth Background Image"
                     height="auto"
                     width = "auto"
                     image={imageName}
-                    title="background cloth image"
+                    title= {imageName}
                   />
                   <Typography align = "center" fontWeight = "400" variant = "h1" color = "secondary" sx = {{marginTop: "25%", marginLeft: "0px"}}>
                   Hi, I'm Hank.
@@ -61,6 +75,27 @@ export default function App() {
                   </Box>
                 </div>
                 </Card>
+              </Grid>
+            </Grid>
+          </Box>
+          <Box sx = {{bgcolor: '#000000'}}>
+            <Grid container spacing = {0} sx = {{backgroundColor: "primary"}}>
+              <Grid item xs = {12} md = {12}>
+                <Typography variant = "h2" fontWeight="400" color = "secondary" align = "center" sx = {{marginTop: "10px"}}>
+                  ABOUT ME
+                </Typography>
+                <Typography variant = "h4" fontWeight="400" color = "secondary" align = "center" sx = {{marginTop: "10px"}}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </Typography>
+                <Typography variant = "h4" fontWeight="400" color = "secondary" align = "center" sx = {{marginTop: "10px"}}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </Typography>
+                <Typography variant = "h4" fontWeight="400" color = "secondary" align = "center" sx = {{marginTop: "10px"}}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </Typography>
+                <Typography variant = "h4" fontWeight="400" color = "secondary" align = "center" sx = {{marginTop: "10px"}}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </Typography>
               </Grid>
             </Grid>
           </Box>
@@ -88,7 +123,14 @@ export default function App() {
                 
               </Grid>
               <Grid item xs = {12} md = {6}>
-                <Image  disableTransition = "true" aspectRatio = "1" src = {imageName} sx = {{marginLeft: "10px"}}/>
+                <CardMedia
+                    component="img"
+                    alt="Red Cloth Background Image"
+                    height="auto"
+                    width = "auto"
+                    image={imageName}
+                    title= {imageName}
+                  />
               </Grid>
             </Grid>
           </Box>
@@ -97,6 +139,18 @@ export default function App() {
               <Grid item xs = {12} md = {12}>
                 <Typography variant = "h2" fontWeight="400" color = "secondary" align = "center" sx = {{marginTop: "10px"}}>
                   ABOUT ME
+                </Typography>
+                <Typography variant = "h4" fontWeight="400" color = "secondary" align = "center" sx = {{marginTop: "10px"}}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </Typography>
+                <Typography variant = "h4" fontWeight="400" color = "secondary" align = "center" sx = {{marginTop: "10px"}}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </Typography>
+                <Typography variant = "h4" fontWeight="400" color = "secondary" align = "center" sx = {{marginTop: "10px"}}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </Typography>
+                <Typography variant = "h4" fontWeight="400" color = "secondary" align = "center" sx = {{marginTop: "10px"}}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </Typography>
               </Grid>
             </Grid>
