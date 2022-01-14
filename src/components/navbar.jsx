@@ -34,12 +34,10 @@ const NavBar = (props) => {
                     <Box justifyContent = "center" maxWidth = "100%"   margin = '10px' marginLeft = '50px' align = 'center' display = 'flex' flexGrow = {1}>
                         <a href = '/' align = 'center'>
                         <img align = 'center' height = '70px' width = 'auto' src = "HankBergerLogo.png" alt = "Hank Berger Logo" noWrap/>
-                        </a>
-                       
+                        </a>    
                     </Box>
-                    <DrawerComponent />
-                    </Toolbar>
-                    
+                   
+                    </Toolbar> 
                 </AppBar>);
     } else {
         return(
