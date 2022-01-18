@@ -1,5 +1,6 @@
 import {Button, Box, Typography, Grid, Card, CardMedia} from "@mui/material";
 import NavBar from "./components/navbar";
+import MobileAbout from "./components/mobileAbout";
 import About from "./components/about";
 import Projects from "./components/projects";
 import Contact from "./components/contact";
@@ -60,7 +61,6 @@ export default function App() {
   //DOM
   if(mobileView){
     //Mobile View
-    console.log(window.innerHeight)
     return( <html lang = "en"> 
         <div>
           <NavBar/>
@@ -104,7 +104,7 @@ export default function App() {
               </Grid>
             </Grid>
           </Box>
-         <About/>
+         <MobileAbout/>
          <Projects/>
          <Contact/>
         </div>
@@ -118,7 +118,7 @@ export default function App() {
           <NavBar/>
           <Box sx = {{bgcolor: '#000000'}}>
             <Grid  container spacing = {0} sx = {{backgroundColor: "primary"}}>
-              <Grid justifyContent = "center" item xs = {12} sm = {8} md = {7} lg = {6} xl = {7}>
+              <Grid justifyContent = "center" item xs = {12} sm = {6} md = {7} lg = {6} xl = {7}>
                 <Typography align = "center" fontWeight = "400" variant = "h1" color = "secondary" sx = {{marginTop: "250px", marginLeft: "0px"}}>
                   Hi, I'm Hank.
                 </Typography>
@@ -131,13 +131,14 @@ export default function App() {
                 </Box>
                 
               </Grid>
-              <Grid item xs = {12} sm = {4} md = {5} lg = {6} xl = {4}>
+              <Grid item xs = {12} sm = {6} md = {5} lg = {6} xl = {4}>
                 <CardMedia
                     component="img"
                     alt="Red Cloth Background Image"
-                    height={window.innerHeight}
+                    height={window.innerHeight - 70}
                     image={imageName}
                     title= {imageName}
+                    sx = {{aspectRatio: "4/5"}}
                   />
               </Grid>
             </Grid>
