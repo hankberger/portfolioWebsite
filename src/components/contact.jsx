@@ -1,34 +1,90 @@
-import {Typography, Box, Grid, CardMedia} from '@mui/material';
+import {Typography, Box, Grid, CardMedia, TextField, Button, Container, Link} from '@mui/material';
 import Image from 'material-ui-image';
 
 function Contact() {
     return( 
-    <Box sx = {{ bgcolor: '#000000'}}>
-        <Typography variant = "h2" fontWeight="300" color = "secondary" align = "center" sx = {{marginTop: "0px"}}>
-            Contact
-        </Typography>
-        <Grid alignItems = "center" container spacing = {0} sx = {{backgroundColor: "primary"}}>
-            <Grid  item xs = {12} sm = {12} md = {6} xl = {6}>
-                <Box>
-                <CardMedia
-                    component="img"
-                    alt="Red Cloth Background Image"
-                    justify = "center"
-                    image= "me.jpg"
-                    title= "Hank Berger"
-                    align = "center"
-                    sx = {{marginLeft: "auto", marginRight: "auto", marginTop: "50px", width: "200px", height: "auto" }}
-                />
-                </Box>
-            </Grid>
-
-            <Grid item xs = {12} sm = {12} md = {6} xl = {6}>
-               <Typography align = "center" color = "secondary">
-                   This is my description of who I am.
-               </Typography>
-            </Grid>
-        </Grid>
-    </Box>)
+    <div>
+      <Box sx = {{ bgcolor: '#000000'}}>
+      <Container align = "left" component="main" maxWidth="xs">
+    
+          <div>
+            <Typography component="h1" variant="h5">
+              Contact Me
+            </Typography>
+            <form  noValidate>
+              <Grid container spacing={2}>
+                <Grid item xs={12} sm={6}>
+                  <TextField
+                    autoComplete="fname"
+                    name="firstName"
+                    variant="outlined"
+                    required
+                    fullWidth
+                    id="firstName"
+                    label="First Name"
+                    autoFocus
+                    sx = {{ bgcolor: '#ffffff'}}
+                  />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <TextField
+                    variant="outlined"
+                    required
+                    fullWidth
+                    id="lastName"
+                    label="Last Name"
+                    name="lastName"
+                    autoComplete="lname"
+                    sx = {{ bgcolor: '#ffffff'}}
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    variant="filled"
+                    color = "primary"
+                    required
+                    fullWidth
+                    id="email"
+                    label="Email Address"
+                    name="email"
+                    autoComplete="email"
+                    sx = {{ bgcolor: '#ffffff'}}
+                  />
+                </Grid>
+               
+                <Grid item xs={12}>
+                  <TextField
+                    variant="filled"
+                    color = "primary"
+                    multiline
+                    minRows = "3"
+                    required
+                    fullWidth
+                    id="email"
+                    label="Message"
+                    name="email"
+                    autoComplete="email"
+                    sx = {{ bgcolor: '#ffffff'}}
+                  />
+                </Grid>
+              </Grid>
+              <Button
+                type="submit"
+                
+                variant="contained"
+                color="secondary"
+              >
+                Sign Up
+              </Button>
+              <Grid container justifyContent="flex-end">
+                <Grid item>
+                </Grid>
+              </Grid>
+            </form>
+          </div>
+        </Container>
+      </Box>
+    </div>)
 }
 
 export default Contact;

@@ -31,7 +31,7 @@ function MobileAbout() {
                 <Typography align = "center" fontWeight = "400" variant = "h1" color = "secondary" sx = {{ fontSize: "420%",marginTop: "0px", marginLeft: "0px"}}>
                     About
                     </Typography>
-                    <Typography fontSize = "125%" align = "left" fontWeight = "200" variant = "h6" color = "secondary" sx = {{marginTop: "0px", marginLeft: "10%", marginRight: "15%"}}>
+                    <Typography fontSize = "125%" align = "left" fontWeight = "200" variant = "h6" color = "secondary" sx = {{marginTop: "15px", marginLeft: "10%", marginRight: "15%"}}>
                     I am a creative developer and designer focused on combining my passion for art and technology wherever I can.
                     I'm an upcoming graduate from the University of Minnesota: Twin Cities in Computer Science.
                     </Typography>
