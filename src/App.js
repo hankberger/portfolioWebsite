@@ -3,7 +3,7 @@ import NavBar from "./components/navbar";
 import MobileAbout from "./components/mobileAbout";
 import About from "./components/about";
 import Projects from "./components/projects";
-import Contact from "./components/contact";
+import Contact from "./components/contactform";
 import React, {useEffect, useState} from "react";
 
 
@@ -43,7 +43,7 @@ export default function App() {
 
   document.addEventListener('scroll', handleScroll);
 
-  const imageName = `imageSequence/clothy2_0${scrollPosition}.png`
+  const imageName = `imageSequence/clothy2_0${scrollPosition}.jpg`
 
 
   //Responsive Stuff :P
@@ -123,7 +123,7 @@ export default function App() {
                   Hi, I'm Hank.
                 </Typography>
                 <Typography align = "center" fontWeight = "300" variant = "h5" color = "secondary" sx = {{marginTop: "0px", marginLeft: "0px"}}>
-                  Software Developer and Artist.
+                  Motion Graphics and Digital Artist.
                 </Typography>
                 <Box textAlign='center'>
                   <Button align = "right" color = "secondary" variant = "outlined" sx = {{marginRight: "12px" ,marginTop: "40px", align: "center"}}>Gallery</Button>
@@ -144,7 +144,7 @@ export default function App() {
             </Grid>
           </Box>
          <About/>
-         <Projects/>
+         {/* <Projects/> */}
          <Contact/>
         </div>
       </html>
