@@ -1,5 +1,4 @@
-import {Typography, Box, Grid, CardMedia, Card, Button, Link} from '@mui/material';
-import Image from 'material-ui-image';
+import {Typography, Box, Grid, CardMedia, Button, } from '@mui/material';
 import React, {useEffect, useState} from "react";
 
 function About() {
