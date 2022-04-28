@@ -5,6 +5,7 @@ import About from "./components/about";
 import Projects from "./components/projects";
 import Contact from "./components/contactform";
 import React, {useEffect, useState} from "react";
+import Footer from "./components/footer";
 
 
 const frameCount = 142;
@@ -146,6 +147,7 @@ export default function App() {
          <About/>
          {/* <Projects/> */}
          <Contact/>
+         <Footer/>
         </div>
       </html>
     );
