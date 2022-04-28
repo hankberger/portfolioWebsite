@@ -7,41 +7,48 @@ function MobileAbout() {
         <Grid container spacing = {0} sx = {{backgroundColor: "primary"}}>
             <Grid item xs = {12} md = {12}>
             <Card sx = {{position: 'relative'}}>
-                <Box sx={{ position: 'relative' }}>
+                <Box sx={{ position: 'relative', backgroundColor: "#000000" }}>
                 <CardMedia
-                    component="img"
-                    alt="Red Cloth Background Image"
-                    height={window.innerHeight}
-                    width = "auto"
-                    image= "Vice.jpg"
-                    title= "Hank Berger"
-                />
+                      
+                        component="video"
+                        alt="Tree 3D Video"
+                        height={window.innerHeight}
+                        image={"Treesies.mp4"}
+                        title= ":)"
+                        autoPlay
+                        muted
+                        loop
+                        sx = {{filter: "brightness(75%)", aspectRatio: "4/5", maxWidth: "500px", margin: "auto"}}
+                        
+                    />
                 </Box>
                 <Box
                 sx={{
                     position: 'absolute',
                     bottom: 0,
                     left: 0,
-                    top: '15%',
-                    width: '100%',
+                    top: '100px',
+                    align: 'center',
+                    margin: 'auto',
+                    width: "500px",
+                    opacity: "100%",
                     color: 'white',
                     padding: '0px',
+                    left: "50%",
+    transform:  "translate(-50%, 0)"
+                    
                 }}
                 >
-                <Typography align = "center" fontWeight = "400" variant = "h1" color = "secondary" sx = {{ fontSize: "420%",marginTop: "0px", marginLeft: "0px"}}>
-                    About
-                    </Typography>
+                
+                <Typography align = "center" fontWeight = "200" variant = "h4" color = "secondary" sx = {{textDecoration: "underline", marginTop: "30px", marginLeft: "0px"}}>
+                  GRAPHICS FOR THE 21ST CENTURY
+                </Typography>
                     <Typography fontSize = "125%" align = "left" fontWeight = "200" variant = "h6" color = "secondary" sx = {{marginTop: "15px", marginLeft: "10%", marginRight: "15%"}}>
-                    I am a creative developer and designer focused on combining my passion for art and technology wherever I can.
-                    I'm an upcoming graduate from the University of Minnesota: Twin Cities in Computer Science.
+                    Make your business stand out using the cutting edge in digital creation. Using the best tools for motion design, I can help build your digital presence and help you create a strong brand for your business. 
+                
+                <br></br><br></br>Let’s work together to create animations for any of your needs. 
                     </Typography>
-                    <Typography fontSize = "125%" align = "left" fontWeight = "200" variant = "h6" color = "secondary" sx = {{marginBottom: "20px", marginTop: "20px", marginLeft: "10%", marginRight: "15%"}}>
-                    I have a love for exploration, whether it be new places or new ideas.
-                    Other hobbies of mine include: generative/simulated 3D art, urban photography, chess, and piano.
-                    </Typography>
-                    <Link variant = "h6" fontWeight="100" color = "#ffffff" href = "/"  marginTop = "10px" sx = {{marginTop: "20px", marginLeft: "10%"}} >
-                        resume
-                    </Link>
+                    <Button href = "/gallery" align = "center" color = "secondary" variant = "contained" sx = {{marginLeft: "33%", marginTop: "40px", align: "center"}}>View Gallery</Button>
                 </Box>
             </Card>
             </Grid>
