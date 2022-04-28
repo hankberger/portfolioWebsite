@@ -11,8 +11,8 @@ export default function Bruh(){
             Gallery
         </Typography>
         <Box textAlign='center'>
-                  <Button href = "/gallery" align = "right" color = "secondary" variant = "outlined" sx = {{marginRight: "12px" ,marginTop: "40px", align: "center"}}>View More on Instagram</Button>
-                  <Button href = "/contact" align = "right" color = "secondary" variant = "contained" sx = {{marginTop: "40px",marginLeft: "12px", align: "center"}}>Contact</Button>
+                  <Button target = "_blank" href = "https://www.instagram.com/hankberger/?hl=en" align = "right" color = "secondary" variant = "outlined" sx = {{marginRight: "12px" ,marginTop: "40px", align: "center"}}>View More on Instagram</Button>
+                  <Button href = "/" align = "right" color = "secondary" variant = "contained" sx = {{marginTop: "40px",marginLeft: "12px", align: "center"}}>Home</Button>
                 </Box>
          <Grid container spacing = {5} width = "80%" sx={{alignText: "center", margin: "0 auto"}}>
          

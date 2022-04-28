@@ -31,9 +31,9 @@ const NavBar = (props) => {
     if(width <= 780){
         return(<AppBar position = "static" color = 'primary' elevation = {0} sx = {{margin: 0, padding: 0, listStyle: 'none'}} >
                     <Toolbar flexWrap = 'wrap'>
-                    <Box justifyContent = "center" maxWidth = "100%"   margin = '10px' marginLeft = '50px' align = 'center' display = 'flex' flexGrow = {1}>
+                    <Box justifyContent = "center" maxWidth = "100%"   margin = '10px' marginLeft = '0px' align = 'center' display = 'flex' flexGrow = {1}>
                         <a href = '/' align = 'center'>
-                        <img align = 'center' height = '70px' width = 'auto' src = "HankBergerLogo.png" alt = "Hank Berger Logo" noWrap/>
+                        <img align = 'center' height = '70px' width = 'auto' src = "HankBergerLogo.png" alt = "Hank Berger Logo"/>
                         </a>    
                     </Box>
                    
@@ -52,7 +52,7 @@ const NavBar = (props) => {
                     <Link variant = "button" color = "#ffffff" href = "/" underline = "hover" align = "center" sx = {linkCss}>
                         HOME
                     </Link>
-                    <Link variant = "button" color = "#ffffff" href = "/gallery" underline = "hover" align = "center" sx = {linkCss}>
+                    <Link variant = "button" color = "#ffffff" href = "/view" underline = "hover" align = "center" sx = {linkCss}>
                         GALLERY
                     </Link>
                     <Link variant = "button" color = "#ffffff" href = "/contact" underline = "hover" align = "center" sx = {linkCss}>

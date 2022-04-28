@@ -7,7 +7,7 @@ import {
        } from "react-router-dom";
 import App from "./App";
 import Contact from "./pages/contact";
-import Gallery from "./pages/gallery";
+import Bruh from "./pages/bruh";
 import {createTheme} from '@mui/material/styles';
 import { ThemeProvider } from "@emotion/react";
 
@@ -45,7 +45,7 @@ render(
           <Routes>
             <Route path = "/" element = {<App/>} />
             <Route path = "contact" element = {<Contact/>} />
-            <Route path = "gallery" element = {<Gallery/>} />
+            <Route path = "view" element = {<Bruh/>}/>
           </Routes>
           </ThemeProvider>
         </BrowserRouter>,
