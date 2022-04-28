@@ -2,10 +2,8 @@ import {Button, Box, Typography, Grid, Card, CardMedia} from "@mui/material";
 import NavBar from "./components/navbar";
 import MobileAbout from "./components/mobileAbout";
 import About from "./components/about";
-import Projects from "./components/projects";
 import Contact from "./components/contactform";
 import React, {useEffect, useState} from "react";
-import Footer from "./components/footer";
 
 
 const frameCount = 142;
