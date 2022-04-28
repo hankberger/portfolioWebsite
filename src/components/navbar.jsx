@@ -1,7 +1,6 @@
 import { AppBar, Link, Box, Toolbar, Typography,} from '@mui/material';
 import React, {useEffect, useState} from "react";
 
-
 const linkCss = {padding: '12px', fontSize: '17px', fontWeight: '400'}
 
 //NavBar
