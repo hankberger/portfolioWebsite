@@ -1,7 +1,6 @@
 import { Typography, Box, Grid} from "@mui/material"
 import NavBar from "../components/navbar"
 import {createTheme} from '@mui/material/styles';
-import { ThemeProvider } from "@emotion/react";
 import ContactForm from "../components/contactform"
 
 const font = "'Rubik', sans-serif";

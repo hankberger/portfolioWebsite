@@ -1,5 +1,4 @@
 import {Typography, Box, Grid, CardMedia, TextField, Button, Container, Link} from '@mui/material';
-import Image from 'material-ui-image';
 import Footer from "./footer"
 
 function ContactForm() {
