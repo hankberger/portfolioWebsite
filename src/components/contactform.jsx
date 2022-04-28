@@ -1,5 +1,6 @@
 import {Typography, Box, Grid, CardMedia, TextField, Button, Container, Link} from '@mui/material';
 import Image from 'material-ui-image';
+import Footer from "./footer"
 
 function ContactForm() {
   const styles = {
@@ -25,7 +26,7 @@ function ContactForm() {
                   </Typography>
                   <Typography fontWeight={200}>
                     I'm here to answer any questions you may have about working with me. Reach out and I'll respond as soon as I can. Feel free to contact me at: <br>
-                    </br><br></br><em>contact@hankberger.com</em><br></br><em>715-690-9916</em><br></br><a href = 'https://drive.google.com/file/d/1vjaMIAMa0LOcWYcJZVJfURJy7sigKyRB/view' style={{color: 'white'}}>resume</a>
+                    </br><br></br><em>contact@hankberger.com</em><br></br><em>715-690-9916</em><br></br><a target = "_blank" href = 'https://drive.google.com/file/d/1vjaMIAMa0LOcWYcJZVJfURJy7sigKyRB/view' style={{color: 'white'}}>resume</a>
                   </Typography>
                   
                 </Grid>
@@ -107,7 +108,10 @@ function ContactForm() {
           </div>
         </Container>
       </Box>
-    </div>)
+    
+      <Footer/>
+    </div>
+   )
 }
 
 export default ContactForm;
