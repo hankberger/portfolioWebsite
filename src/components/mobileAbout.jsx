@@ -48,7 +48,7 @@ function MobileAbout() {
                 
                 <br></br><br></br>Let’s work together to create animations for any of your needs. 
                     </Typography>
-                    <Button href = "/gallery" align = "center" color = "secondary" variant = "contained" sx = {{marginLeft: "33%", marginTop: "40px", align: "center"}}>View Gallery</Button>
+                    <Button href ="/view" align = "center" color = "secondary" variant = "contained" sx = {{marginLeft: "33%", marginTop: "40px", align: "center"}}>View Gallery</Button>
                 </Box>
             </Card>
             </Grid>

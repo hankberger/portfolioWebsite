@@ -97,8 +97,8 @@ export default function App() {
                         Software Developer and Artist.
                       </Typography>
                       <Box textAlign='center'>
-                        <Button align = "right" color = "secondary" variant = "outlined" sx = {{marginRight: "12px" ,marginTop: "40px", align: "center"}}>Gallery</Button>
-                        <Button align = "right" color = "secondary" variant = "contained" sx = {{marginTop: "40px",marginLeft: "12px", align: "center"}}>Contact</Button>
+                        <Button href = "/view" align = "right" color = "secondary" variant = "outlined" sx = {{marginRight: "12px" ,marginTop: "40px", align: "center"}}>Gallery</Button>
+                        <Button href = "/contact" align = "right" color = "secondary" variant = "contained" sx = {{marginTop: "40px",marginLeft: "12px", align: "center"}}>Contact</Button>
                       </Box>
                   </Box>
                 </Card>
@@ -126,7 +126,7 @@ export default function App() {
                   Motion Graphics and Digital Artist.
                 </Typography>
                 <Box textAlign='center'>
-                  <Button href = "/gallery" align = "right" color = "secondary" variant = "outlined" sx = {{marginRight: "12px" ,marginTop: "40px", align: "center"}}>Gallery</Button>
+                  <Button href = "/view" align = "right" color = "secondary" variant = "outlined" sx = {{marginRight: "12px" ,marginTop: "40px", align: "center"}}>Gallery</Button>
                   <Button href = "/contact" align = "right" color = "secondary" variant = "contained" sx = {{marginTop: "40px",marginLeft: "12px", align: "center"}}>Contact</Button>
                 </Box>
                 
